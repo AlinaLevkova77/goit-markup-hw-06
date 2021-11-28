@@ -418,11 +418,15 @@
             placeholder="E-mail"
             autofocus>
            
+  
+            <button class="button-subscribe">Подписаться
 
-            <button class="button-subscribe">Подписаться</button>
+            <svg class="icon-subscribe ">
+                <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+            </button>
+            
 
-    
-</div>
 </footer>
 <div class="backdrop  backdrop is-hidden" data-modal="" >
 <div class="modal">
@@ -438,22 +442,29 @@
 
             <div class="form-group">
             <label for="name">Имя</label>
-            <input type="name"  class="form-name"  name="name" id="name" />
+            <input  class="form-name"  type="name"  name="name" id="name" />
 
             <svg class="form-icons">
             <use  href="./images/icons.svg#person-black"></use>
             </svg>
-           
             </div>
 
             <div class="form-group">
             <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" />
+            <input class="form-name"  type="tel" name="tel" id="tel" />
+
+            <svg class="form-icons">
+                <use href="./images/icons.svg#phone-black"></use>
+            </svg>
             </div>
 
             <div class="form-group">
             <label for="email">Почта</label>
-            <input type="email" name="email" id="email"/>
+            <input  class="form-name" type="email" name="email" id="email"/>
+
+            <svg class="form-icons">
+                <use href="./images/icons.svg#email-black"></use>
+            </svg>
             </div>
 
             <div class="form-group ">
@@ -471,8 +482,9 @@
             <input type="checkbox" name="checkbox"  id="checkbox" checked>
             <label for="checkbox">Соглашаюсь с рассылкой и принимаю<span class="form-item">Условия договора</span></label>
            </div>
-
+          
             <button  class="button-submit" type="submit">Отправить</button>
+        
         </form>
 
     </div>
