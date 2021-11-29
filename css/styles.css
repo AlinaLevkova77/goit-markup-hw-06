@@ -222,6 +222,7 @@ img {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
+  transition: color 250ms var(--timing-function);
 }
 .button.primary:hover,
 .button.primary:focus,
@@ -740,16 +741,17 @@ img {
 input,
 textarea {
   outline: 0;
+  transition: color 250ms var(--timing-function);
 }
 /********************Form-group***************/
 
 .form-text {
-  font-style: 700;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 00.03em;
   color: #212121;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 .form {
   width: 528px;
@@ -762,6 +764,7 @@ textarea {
   display: flex;
   position: relative;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .form-group input {
@@ -772,10 +775,10 @@ textarea {
   border-radius: 4px;
   height: 40px;
   padding-left: 42px;
+  transition: color 250ms var(--timing-function);
 }
 .form-group label {
   margin-bottom: 4px;
-  margin-top: 10px;
   display: flex;
   color: #757575;
   letter-spacing: 0.01em;
@@ -789,9 +792,9 @@ textarea {
   display: inline-block;
   width: 18px;
   height: 18px;
-  top: 78%;
+  top: 72%;
   left: 15px;
-  transform: translateY(-78%);
+  transform: translateY(-72%);
 }
 
 .form-name:focus ~ .form-icons {
@@ -821,28 +824,69 @@ textarea {
 .modal-textarea:focus {
   border: 1px solid #2196f3;
 }
-
-.form-box input [type="checkbox"] {
-  padding: 0;
-  margin: 0;
-  width: 16px;
-  height: 19px;
+.modal_checkbox {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
 }
-.form-box label {
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+.label {
+  display: block;
+  height: 24px;
+}
+.form-item {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   font-weight: 400;
   align-items: center;
   color: #757575;
+  cursor: pointer;
 }
-.form-item {
-  color: var(--accent-color);
-  margin-left: 4px;
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  line-height: 0.85;
+.form-link {
+  color: #2196f3;
+  text-decoration: underline;
 }
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.icon-check--state {
+  margin-right: 7px;
+  border: 1px solid #212121;
+  border-radius: 4px;
+  transition: color 250ms var(--timing-function),
+    border 250ms var(--timing-function);
+}
+.modal_checkbox:last-of-type:hover > .icon-check--state,
+.modal_checkbox:last-of-type:focus-within > .icon-check--state {
+  border: 2px solid #2196f3;
+}
+
+.check-box:checked + .icon-check--state {
+  border: 2px solid transparent;
+  background-color: #2196f3;
+}
+.icon-check {
+  width: 16px;
+  height: 15px;
+  fill: currentColor;
+}
+
 .submit {
   margin-top: 30px;
   min-width: 200px;
