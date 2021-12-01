@@ -737,6 +737,7 @@ img {
 .icon-close-black {
   width: 18px;
   height: 18px;
+  transition: color 250ms var(--timing-function);
 }
 input,
 textarea {
